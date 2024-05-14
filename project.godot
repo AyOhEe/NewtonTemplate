@@ -1,0 +1,45 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="NewtonTemplate"
+run/main_scene="res://Scenes/empty_newton_level.tscn"
+config/features=PackedStringArray("4.2", "C#", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+VRUserMeasurements="*res://addons/Godot-VR-Measurements/scenes/VRUserMeasurements.tscn"
+
+[dotnet]
+
+project/assembly_name="NewtonTemplate"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/Godot-VR-Measurements/plugin.cfg", "res://addons/Godot-VR-UI/plugin.cfg")
+
+[filesystem]
+
+import/fbx/enabled=false
+
+[physics]
+
+3d/physics_engine="JoltPhysics3D"
+
+[rendering]
+
+renderer/rendering_method="mobile"
+
+[xr]
+
+openxr/enabled=true
+shaders/enabled=true

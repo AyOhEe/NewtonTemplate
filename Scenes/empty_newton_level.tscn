@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://bj0ybqtxjexvx"]
+
+[ext_resource type="PackedScene" uid="uid://dwqd3nqutpp6t" path="res://addons/Godot-Extras/Environments/SceneLight.tscn" id="1_275mi"]
+[ext_resource type="PackedScene" uid="uid://njve3qkkacgy" path="res://addons/Godot-Extras/Environments/WorldEnvironment.tscn" id="2_7xhul"]
+[ext_resource type="PackedScene" uid="uid://3716brh3f04n" path="res://addons/Newton/Scenes/newton_player.tscn" id="3_tv4a7"]
+[ext_resource type="PackedScene" uid="uid://b3elqexfi5rb0" path="res://addons/Godot-VR-UI/scenes/ui_panel.tscn" id="3_w1cse"]
+[ext_resource type="PackedScene" uid="uid://j8qpu2c68gyt" path="res://addons/Godot-VR-Measurements/demo/MeasurementsUI.tscn" id="4_ytyqt"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_85a3e"]
+size = Vector3(10, 1, 10)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hxjc3"]
+data = PackedVector3Array(-5, 0.5, 5, 5, 0.5, 5, -5, -0.5, 5, 5, 0.5, 5, 5, -0.5, 5, -5, -0.5, 5, 5, 0.5, -5, -5, 0.5, -5, 5, -0.5, -5, -5, 0.5, -5, -5, -0.5, -5, 5, -0.5, -5, 5, 0.5, 5, 5, 0.5, -5, 5, -0.5, 5, 5, 0.5, -5, 5, -0.5, -5, 5, -0.5, 5, -5, 0.5, -5, -5, 0.5, 5, -5, -0.5, -5, -5, 0.5, 5, -5, -0.5, 5, -5, -0.5, -5, 5, 0.5, 5, -5, 0.5, 5, 5, 0.5, -5, -5, 0.5, 5, -5, 0.5, -5, 5, 0.5, -5, -5, -0.5, 5, 5, -0.5, 5, -5, -0.5, -5, 5, -0.5, 5, 5, -0.5, -5, -5, -0.5, -5)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" parent="." instance=ExtResource("1_275mi")]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("2_7xhul")]
+
+[node name="NewtonPlayer" parent="." instance=ExtResource("3_tv4a7")]
+
+[node name="ui_panel" parent="." instance=ExtResource("3_w1cse")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19418, -2.04079)
+UIScene = ExtResource("4_ytyqt")
+PanelSize = Vector2(1, 2)
+ResolutionScale = 512
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_85a3e")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hxjc3")

@@ -1,0 +1,18 @@
+[submodule "addons/Newton"]
+	path = addons/Newton
+	url = https://github.com/AyOhEe/Newton.git
+[submodule "addons/Godot-OpenXR-Startup"]
+	path = addons/Godot-OpenXR-Startup
+	url = https://github.com/AyOhEe/Godot-OpenXR-Startup.git
+[submodule "addons/Godot-Extras"]
+	path = addons/Godot-Extras
+	url = https://github.com/AyOhEe/Godot-Extras.git
+[submodule "addons/Godot-VR-UI"]
+	path = addons/Godot-VR-UI
+	url = https://github.com/AyOhEe/Godot-VR-UI.git
+[submodule "addons/Godot-VR-Measurements"]
+	path = addons/Godot-VR-Measurements
+	url = https://github.com/AyOhEe/Godot-VR-Measurements.git
+[submodule "addons/Godot-VR-Body-Solver"]
+	path = addons/Godot-VR-Body-Solver
+	url = https://github.com/AyOhEe/Godot-VR-Body-Solver.git
