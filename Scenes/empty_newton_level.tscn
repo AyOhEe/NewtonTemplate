@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dwqd3nqutpp6t" path="res://addons/Godot-Extras/Environments/SceneLight.tscn" id="1_275mi"]
 [ext_resource type="PackedScene" uid="uid://njve3qkkacgy" path="res://addons/Godot-Extras/Environments/WorldEnvironment.tscn" id="2_7xhul"]
-[ext_resource type="PackedScene" uid="uid://3716brh3f04n" path="res://addons/Newton/Scenes/newton_player.tscn" id="3_tv4a7"]
+[ext_resource type="PackedScene" uid="uid://wo8o1d8w2j4s" path="res://addons/Newton/Scenes/newton_player.tscn" id="3_tv4a7"]
 [ext_resource type="PackedScene" uid="uid://b3elqexfi5rb0" path="res://addons/Godot-VR-UI/scenes/ui_panel.tscn" id="3_w1cse"]
 [ext_resource type="PackedScene" uid="uid://j8qpu2c68gyt" path="res://addons/Godot-VR-Measurements/demo/MeasurementsUI.tscn" id="4_ytyqt"]
 
